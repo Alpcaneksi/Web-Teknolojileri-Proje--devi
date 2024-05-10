@@ -1,0 +1,21 @@
+#carouselExampleCaptions {
+    width: 50%;
+    height: 500px;
+    align-items: center;
+    margin: auto;
+    margin-top: 150px;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.carousel {
+    max-width: 600px; /* Slider'ın maksimum genişliği */
+    width: 100%;
+}
