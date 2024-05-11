@@ -1,0 +1,32 @@
+.table-container {
+    max-width: 800px; /* Örnek olarak maksimum genişliği 800 piksel olarak ayarlayın */
+    margin: 0 auto; /* Sayfanın ortasına hizalamak için */
+}
+
+body{
+
+    background-size: cover;
+    background-image: url(bgbeyaz.jpeg);
+    
+}
+.card{
+    display: inline-block;
+    background-color: #121e30;
+}
+.table-container {
+    margin-top: 20px; /* İstenilen bir değer */
+}
+
+.carousel-inner {
+    height: 300px;
+}
+
+/* Tablonun altında boşluk bırak */
+.table-container {
+    margin-top: 20px;}
+    #carouselExampleCaptions{
+width:400px;
+height: 400px;
+overflow: hidden; /* Taşan içeriklerin gizlenmesi */
+  float: left;
+    }
