@@ -1,32 +1,32 @@
-.table-container {
-    max-width: 800px; /* Örnek olarak maksimum genişliği 800 piksel olarak ayarlayın */
-    margin: 0 auto; /* Sayfanın ortasına hizalamak için */
-}
-
-body{
-
-    background-size: cover;
-    background-image: url(bgbeyaz.jpeg);
-    
-}
 .card{
-    display: inline-block;
-    background-color: #121e30;
-}
-.table-container {
-    margin-top: 20px; /* İstenilen bir değer */
-}
-
-.carousel-inner {
-    height: 300px;
-}
-
-/* Tablonun altında boşluk bırak */
-.table-container {
-    margin-top: 20px;}
-    #carouselExampleCaptions{
-width:400px;
+width: 40%;
 height: 400px;
-overflow: hidden; /* Taşan içeriklerin gizlenmesi */
-  float: left;
-    }
+display: inline-block;
+}
+.table-container {
+    max-height: 400px; /* Belirlediğiniz bir yükseklik */
+    overflow-y: auto; /* Dikey kaydırma çubuğunu göster */
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-6 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+#carouselExampleCaptions{
+width: 40%;
+height: 200px;
+
+}
+body{
+    background-image: url(bgbeyaz.jpeg);
+}
