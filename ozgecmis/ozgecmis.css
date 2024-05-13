@@ -12,6 +12,7 @@
     width: 45%;
     padding: 20px;
     margin-top: 50px;
+    text-align: center;
 }
 
 .ilkogretim-ozellikler p,
@@ -26,6 +27,8 @@
     width: 45%;
     padding: 20px;
     margin-top: 50px;
+    text-align: center;
+   
 }
 
 .sau-ozellikler p,
@@ -37,150 +40,28 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
+
 body {
     background-size: cover;
-    background-image: url(bgbeyaz.jpeg
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    );
+    background-image: url(bgbeyaz.jpeg);
     height: 100vh;
     width: 100%;
     align-items: center;
     justify-content: center;
     background-position: center;
+}
+
+nav.navbar {
+    background-color: #121e30 !important;
+    /* Arka plan rengi */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    /* Metin rengi */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #6d6649;
+    /* Fare üzerine gelindiğinde metin rengi */
 }

@@ -1,4 +1,40 @@
-#carouselExampleCaptions{
+#carouselExampleCaptions {
     width: 500px;
     height: 500px;
+}
+
+nav.navbar {
+    background-color: #121e30 !important;
+    /* Arka plan rengi */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    /* Metin rengi */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #6d6649;
+    /* Fare üzerine gelindiğinde metin rengi */
+}
+
+body {
+    background-image: url(bgbeyaz.jpeg);
+}
+
+.sapanca-ozellikler,
+.beskopru-ozellikler,
+.acarlar-ozellikler,
+.maden-ozellikler {
+    background-color: #121e30;
+    border-radius: 10px;
+    /* Kenarları ovalleştirmek için piksel değeri belirtin */
+    overflow: hidden;
+    /* İçeriğin oval çerçeveden taşmasını engellemek için gerekli */
+    margin: 20px auto;
+    width: 75%;
+    
+}
+.yazı-ozellikler{
+    color: beige;
 }
