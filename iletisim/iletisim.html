@@ -50,7 +50,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div id="app">
-                    <form @submit.prevent="submitForm" class="form-box">
+                    <form   id="myForm" @submit.prevent="submitForm" class="form-box">
                         <h2 class="iletisim-baslık">Bana Ulaşın!</h2>
                         <div class="mb-3">
                             <label for="name" class="form-label">Adınız:</label>
@@ -73,13 +73,27 @@
                             <textarea id="message" v-model="message" class="form-control" required></textarea>
                         </div>
                         <div class="mb-3">
-                            <button type="submit" class="btn btn-primary">Formu Gönder (Vue.js)</button>
-                            <button type="submit" class="btn btn-primary" @click=" "> Formu Gönder (JS)</button>
-                            <button type="button" @click="resetForm" class="btn btn-secondary">Formu Sıfırla </button>
-                            
-                        </div>
+                            <label class="form-label">Cinsiyet:</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" id="male" v-model="gender" value="male"
+                                        class="form-check-input">
+                                    <label for="male" class="form-check-label">Erkek</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" id="female" v-model="gender" value="female"
+                                        class="form-check-input">
+                                    <label for="female" class="form-check-label">Kadın</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary">Formu Gönder (Vue.js)</button>
+                                <button type="submit" class="btn btn-primary" @click="DOMContentLoaded"> Formu Gönder (JS)</button>
+                                <button type="button" @click="resetForm" class="btn btn-secondary">Formu Sıfırla</button>
+
+                            </div>
                     </form>
-                 
+
                 </div>
             </div>
         </div>
@@ -88,22 +102,22 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            document.getElementById('myForm').addEventListener('submit', function (event) {
-                event.preventDefault();
-                var name = document.getElementById('name').value;
-                var surname = document.getElementById('surname').value;
-                var phone = document.getElementById('phone').value;
-                var email = document.getElementById('email').value;
-                var message = document.getElementById('message').value;
+    document.getElementById('myForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        var name = document.getElementById('name').value;
+        var surname = document.getElementById('surname').value;
+        var phone = document.getElementById('phone').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+        var gender = document.querySelector('input[name="gender"]:checked');
 
-                if (name && surname && phone && email && message) {
-                   alert("Form başarıyla dolduruldu! (JS)")
-                } else {
-                   alert("'Lütfen tüm alanları doldurun! (Vue.js)")
-                }
-            });
-
-        });
+        if (name && surname && phone && email && message && gender) {
+            alert("Form başarıyla dolduruldu! (JS)")
+        } else {
+            alert("Lütfen tüm alanları doldurun!")
+        }
+    });
+});
     </script>
 </body>
 

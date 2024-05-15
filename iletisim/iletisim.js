@@ -7,18 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
             phone: '',
             email: '',
             message: '',
-           
+            gender: '' // Cinsiyet veri özelliği
         },
         methods: {
             submitForm() {
                 // Form verilerini işleyin veya bir API'ye gönderin
-                if (this.name && this.surname && this.phone && this.email && this.message) {
-                    alert("Form başarıyla dolduruldu! (Vue.js)")
-                   
+                if (this.name && this.surname && this.phone && this.email && this.message && this.gender) {
+                    alert("Form başarıyla dolduruldu! (Vue.js)");
                     this.resetForm();
                 } else {
-                     alert('Lütfen tüm alanları doldurun! (Vue.js)') ;
-                   
+                    alert('Lütfen tüm alanları doldurun! (Vue.js)');
                 }
             },
             resetForm() {
@@ -27,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.phone = '';
                 this.email = '';
                 this.message = '';
-                
+                this.gender = ''; // Cinsiyet veri özelliğini sıfırla
             }
         }
     });
