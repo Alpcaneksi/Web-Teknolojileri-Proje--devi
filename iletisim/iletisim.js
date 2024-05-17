@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (this.name && this.surname && this.phone && this.email && this.message && this.gender) {
                     alert("Form başarıyla dolduruldu! (Vue.js)");
                     this.resetForm();
+                    window.location.href = 'iletisimnasarili.html'; // Yönlendirme yapılacak sayfa
                 } else {
                     alert('Lütfen tüm alanları doldurun! (Vue.js)');
                 }
