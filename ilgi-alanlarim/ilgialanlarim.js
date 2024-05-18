@@ -1,50 +1,29 @@
-const apiKey = '11xX5GACZTB4dewSI2Goa8DFZx9OrQY4GaFoN88j';  // Burada 'your_api_key_here' yerine kendi API anahtarınızı kullanın
+$(document).ready(function(){
+    // API endpoint URL'si
+    var apiUrl = "apikey 1XBwEBSwzuvEXGroogzPvr:6cX8GHHEQMoLgpO1VuGYyr";
 
-document.getElementById('teamForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const teamName = document.getElementById('teamName').value;
-    getTeamInfo(teamName);
-});
+    // API anahtarı
+    var apiKey = "apikey 1XBwEBSwzuvEXGroogzPvr:6cX8GHHEQMoLgpO1VuGYyr";
 
-async function getTeamInfo(teamName) {
-    const url = `https://www.thesportsdb.com/api/v1/json/${apiKey}/searchteams.php?t=${teamName}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    const team = data.teams ? data.teams[0] : null;
-    if (team) {
-        displayTeamInfo(team);
-        getRecentMatches(team.idTeam);
-    } else {
-        document.getElementById('teamInfo').innerHTML = '<p>Takım bulunamadı.</p>';
-        document.getElementById('recentMatches').innerHTML = '';
+    // Takım verilerini almak için GET isteği yapma fonksiyonu
+    function getTeamData() {
+        $.ajax({
+            url: apiUrl,
+            headers: {
+                "Authorization": "Apikey " + apiKey
+            },
+            method: "GET",
+            success: function(response) {
+                // API'den gelen verilere göre sayfayı güncelleme
+                // Örnek olarak, burada gelen verileri işleyebilir ve sayfada gösterebilirsiniz.
+                console.log(response);
+            },
+            error: function(xhr, status, error) {
+                console.error("Hata: ", error);
+            }
+        });
     }
-}
 
-function displayTeamInfo(team) {
-    const teamInfoHtml = `
-        <h2>${team.strTeam}</h2>
-        <p><strong>Kuruluş Yılı:</strong> ${team.intFormedYear}</p>
-        <p><strong>Stadyum:</strong> ${team.strStadium}</p>
-        <p><strong>Stadyum Kapasitesi:</strong> ${team.intStadiumCapacity}</p>
-        <p><strong>Lokasyon:</strong> ${team.strStadiumLocation}</p>
-        <p><strong>Açıklama:</strong> ${team.strDescriptionEN}</p>
-        <p><img src="${team.strTeamBadge}" alt="Team Badge"></p>
-    `;
-    document.getElementById('teamInfo').innerHTML = teamInfoHtml;
-}
-
-async function getRecentMatches(teamId) {
-    const url = `https://www.thesportsdb.com/api/v1/json/${apiKey}/eventslast.php?id=${teamId}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    displayRecentMatches(data.results);
-}
-
-function displayRecentMatches(matches) {
-    let matchesHtml = '<h2>Son Maçlar</h2><ul>';
-    matches.forEach(match => {
-        matchesHtml += `<li>${match.strEvent} - ${match.dateEvent} - ${match.strVenue}</li>`;
-    });
-    matchesHtml += '</ul>';
-    document.getElementById('recentMatches').innerHTML = matchesHtml;
-}
+    // Sayfa yüklendiğinde takım verilerini al
+    getTeamData();
+});
