@@ -6,8 +6,22 @@ display: inline-block;
 .table-container {
     max-height: 400px; /* Belirlediğiniz bir yükseklik */
     overflow-y: auto; /* Dikey kaydırma çubuğunu göster */
+    color: #121e30;
 }
 
+.table {
+    background-color: #121e30; /* Tablonun arka plan rengi */
+    color: white; /* Metin rengi */
+}
+.thead-dark {
+    background-color: #2a3b4c; /* Başlık satırının arka plan rengi */
+}
+.table-bordered {
+    border: 2px solid #3e4f61; /* Tablonun kenar rengi */
+}
+.table-hover tbody tr:hover {
+    background-color: #3e4f61; /* Satır üzerine gelindiğinde değişen arka plan rengi */
+}
 .row {
     margin-right: -15px;
     margin-left: -15px;

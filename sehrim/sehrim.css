@@ -1,15 +1,19 @@
+#carouselExampleCaptions {
+    margin-top: 20vh;
+    /* Üstten 20 piksel mesafe */
+    width: 75%;
+    /* Genişlik: Sayfanın %75'ini kaplayacak şekilde */
+    margin-left: auto;
+    /* Sağdan ve soldan otomatik hizalama */
+    margin-right: auto;
+    /* Sağdan ve soldan otomatik hizalama */
+    width: 50%;
+    height: 100vh;
+}
 
-    #carouselExampleCaptions {
-        margin-top: 20vh; /* Üstten 20 piksel mesafe */
-        width: 75%; /* Genişlik: Sayfanın %75'ini kaplayacak şekilde */
-        margin-left: auto; /* Sağdan ve soldan otomatik hizalama */
-        margin-right: auto; /* Sağdan ve soldan otomatik hizalama */
-        width: 50% ;
-        height: 100vh;
-    }
-.carousel-item img{
-max-width: 1200px;
-max-height: 450px;
+.carousel-item img {
+    max-width: 1200px;
+    max-height: 450px;
 }
 
 nav.navbar {
@@ -31,7 +35,7 @@ body {
     background-image: url(bgbeyaz.jpeg);
 }
 
-.sapanca-ozellikler{
+.sapanca-ozellikler {
     background-color: #121e30;
     border-radius: 10px;
     /* Kenarları ovalleştirmek için piksel değeri belirtin */
@@ -41,7 +45,7 @@ body {
     margin-right: auto;
     width: 75%;
     max-height: 250vh;
-
+    margin-top: -20vh;
 }
 
 
@@ -58,8 +62,9 @@ body {
     margin-top: 10vh;
     width: 75%;
     max-height: 250vh;
-    
+
 }
-.yazı-ozellikler{
+
+.yazı-ozellikler {
     color: beige;
 }
