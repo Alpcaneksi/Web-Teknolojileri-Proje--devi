@@ -8,40 +8,45 @@
     <link rel="stylesheet" href="iletisim.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="iletisim.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
         <div class="collapse navbar-collapse">
+
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/xx/Web-Teknolojileri-Proje--devi/anasayfa/anasayfa.html">Ana Sayfa</a>
+                    <a class="nav-link" href="anasayfa.html">Ana Sayfa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/xx/Web-Teknolojileri-Proje--devi/hakk%C4%B1nda/hakk%C4%B1nda.html">Hakkında</a>
+                    <a class="nav-link" href="hakk%C4%B1nda.html">Hakkında</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/xx/Web-Teknolojileri-Proje--devi/ozgecmis/ozgecmis.html">Özgeçmiş</a>
+                    <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/xx/Web-Teknolojileri-Proje--devi/sehrim/sehrim.html">Şehrim</a>
+                    <a class="nav-link" href="sehrim.html">Şehrim</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"
-                        href="http://localhost/xx/Web-Teknolojileri-Proje--devi/mirasımız/sakaryaspor/sakaryasporfk.html">Mirasımız</a>
+                    <a class="nav-link" href="sakaryasporfk.html">Mirasımız</a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link " href="http://localhost/xx/Web-Teknolojileri-Proje--devi/ilgi-alanlarim/ilgialanlarim.html">İlgi Alanlarım</a>
+                    <a class="nav-link " href="ilgialanlarim.html">İlgi Alanlarım</a>
                 </li>
                 <li class="nav-item ms-auto">
-                    <a class="nav-link" href="http://localhost/xx/Web-Teknolojileri-Proje--devi/giris-yap/girisyap.html">Giriş Yap</a>
+                    <a class="nav-link" href="girisyap.html">Giriş Yap</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/xx/Web-Teknolojileri-Proje--devi/iletisim/iletisim.html">İletişim</a>
+                    <a class="nav-link" href="iletisim.html">İletişim</a>
                 </li>
             </ul>
+
         </div>
+
     </nav>
 
     <div class="container-md mt-5">
@@ -74,18 +79,22 @@
                             <label class="form-label">Cinsiyet:</label>
                             <div>
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" id="male" v-model="gender" value="male" class="form-check-input">
+                                    <input type="radio" id="male" v-model="gender" value="male"
+                                        class="form-check-input">
                                     <label for="male" class="form-check-label">Erkek</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" id="female" v-model="gender" value="female" class="form-check-input">
+                                    <input type="radio" id="female" v-model="gender" value="female"
+                                        class="form-check-input">
                                     <label for="female" class="form-check-label">Kadın</label>
                                 </div>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <button type="submit" class="btn btn-primary" @click="submitWithVue">Formu Gönder (Vue.js)</button>
-                            <button type="button" class="btn btn-primary" @click="submitWithJS">Formu Gönder (JS)</button>
+                            <button type="submit" class="btn btn-primary" @click="submitWithVue">Formu Gönder
+                                (Vue.js)</button>
+                            <button type="button" class="btn btn-primary" @click="submitWithJS">Formu Gönder
+                                (JS)</button>
                             <button type="button" @click="resetForm" class="btn btn-secondary">Formu Sıfırla</button>
                         </div>
                     </form>
@@ -93,67 +102,89 @@
             </div>
         </div>
     </div>
-<script>
-    new Vue({
-    el: '#app',
-    data: {
-        name: '',
-        surname: '',
-        phone: '',
-        email: '',
-        message: '',
-        gender: ''
-    },
-    methods: {
-        submitWithVue() {
-            if (this.name && this.surname && this.phone && this.email && this.message && this.gender) {
-                // Save data to local storage
-                localStorage.setItem('name', this.name);
-                localStorage.setItem('surname', this.surname);
-                localStorage.setItem('phone', this.phone);
-                localStorage.setItem('email', this.email);
-                localStorage.setItem('message', this.message);
-                localStorage.setItem('gender', this.gender);
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: '',
+                surname: '',
+                phone: '',
+                email: '',
+                message: '',
+                gender: ''
+            },
+            methods: {
+                submitWithVue() {
+                    if (this.name && this.surname && this.phone && this.email && this.message && this.gender) {
+                        // Girilen değerlerin gönderimi
+                        localStorage.setItem('name', this.name);
+                        localStorage.setItem('surname', this.surname);
+                        localStorage.setItem('phone', this.phone);
+                        localStorage.setItem('email', this.email);
+                        localStorage.setItem('message', this.message);
+                        localStorage.setItem('gender', this.gender);
+                        alert("Form gönderimi Vue.js ile yapılmıştır.");
 
-                // Redirect to another page
-                window.location.href = 'iletisimbasarili.html';
-            } else {
-                alert("Lütfen tüm alanları doldurun!");
+                        //İletişim sonuç formuna gönderir.
+                        window.location.href = 'iletisimbasarili.html';
+                    } else {
+                        alert("Lütfen tüm alanları doldurun!");
+                    }
+                },
+                submitWithJS() {
+
+                    // Girilen değerlerin alınması
+                    var nameInput = document.getElementById('name');
+                    var surnameInput = document.getElementById('surname');
+                    var phoneInput = document.getElementById('phone');
+                    var emailInput = document.getElementById('email');
+                    var messageInput = document.getElementById('message');
+                    var maleInput = document.getElementById('male'); // Erkek seçeneğinin id'si male
+                    var femaleInput = document.getElementById('female'); // Kadın seçeneğinin id'si female
+
+                    // Girilen değerlerin kontrol edilmesi
+                    var name = nameInput.value.trim();
+                    var surname = surnameInput.value.trim();
+                    var phone = phoneInput.value.trim();
+                    var email = emailInput.value.trim();
+                    var message = messageInput.value.trim();
+                    var genderValue = maleInput.checked ? maleInput.value : (femaleInput.checked ? femaleInput.value : null);
+
+                    // Girilen değerlerin gönderilmesi
+                    if (name && surname && phone && email && message && genderValue) {
+                        // Form verilerini yerel depolama alanına kaydet
+                        localStorage.setItem('name', name);
+                        localStorage.setItem('surname', surname);
+                        localStorage.setItem('phone', phone);
+                        localStorage.setItem('email', email);
+                        localStorage.setItem('message', message);
+                        localStorage.setItem('gender', genderValue);
+
+                        // Bildirim göster
+                        alert("Form gönderimi JS ile yapılmıştır.");
+
+                        // Başka bir sayfaya yönlendir
+                        window.location.href = 'iletisimbasarili.html';
+                    } else {
+                        // Kullanıcıya tüm alanları doldurması gerektiğini bildir
+                        alert("Lütfen tüm alanları doldurun!");
+                    }
+                },
+
+                resetForm() {
+                    this.name = '';
+                    this.surname = '';
+                    this.phone = '';
+                    this.email = '';
+                    this.message = '';
+                    this.gender = '';
+                }
             }
-        },
-        submitWithJS() {
-            var name = document.getElementById('name').value;
-            var surname = document.getElementById('surname').value;
-            var phone = document.getElementById('phone').value;
-            var email = document.getElementById('email').value;
-            var message = document.getElementById('message').value;
-            var gender = document.querySelector('input[name="gender"]:checked');
+        });
 
-            if (name && surname && phone && email && message && gender) {
-                localStorage.setItem('name', name);
-                localStorage.setItem('surname', surname);
-                localStorage.setItem('phone', phone);
-                localStorage.setItem('email', email);
-                localStorage.setItem('message', message);
-                localStorage.setItem('gender', gender.value);
 
-                window.location.href = 'iletisimbasarili.html';
-            } else {
-                alert("Lütfen tüm alanları doldurun!");
-            }
-        },
-        resetForm() {
-            this.name = '';
-            this.surname = '';
-            this.phone = '';
-            this.email = '';
-            this.message = '';
-            this.gender = '';
-        }
-    }
-});
-</script>
- 
+    </script>
+
 </body>
 
 </html>
